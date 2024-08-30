@@ -1,4 +1,4 @@
-package Objectives;
+package Practical01.Objectives;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         try {
-            File myobj = new File("src/Objectives/test.txt");
+            File myobj = new File("src/Practical01.Objectives/test.txt");
             Scanner sc = new Scanner(myobj);
             ArrayList<String> list = new ArrayList<String>();
 
