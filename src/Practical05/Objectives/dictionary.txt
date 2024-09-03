@@ -1,0 +1,10 @@
+apple=fruit that is typically red, green, or yellow
+banana=long, curved fruit with a thick peel
+cat=small domesticated carnivorous mammal
+dog=domesticated carnivorous mammal
+elephant=large herbivorous mammal with a trunk
+giraffe=tall African mammal with a very long neck
+house=building for human habitation
+jungle=land densely covered with trees and vegetation
+kangaroo=large Australian marsupial with powerful hind legs
+lemon=yellow citrus fruit

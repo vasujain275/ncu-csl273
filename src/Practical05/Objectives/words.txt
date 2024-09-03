@@ -1,0 +1,10 @@
+apple
+banana
+car
+dog
+elephant
+house
+jungel
+lemn
+orange
+zebra
