@@ -49,7 +49,7 @@ class Person implements Runnable {
         System.out.println(name + " is about to withdraw " + amount);
         if (account.getBalance() >= amount) {
             try {
-                Thread.sleep(100); // Simulate some processing time
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -65,7 +65,7 @@ class Person implements Runnable {
          synchronized (account) {
         System.out.println(name + " is about to deposit " + amount);
         try {
-            Thread.sleep(100); // Simulate some processing time
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
