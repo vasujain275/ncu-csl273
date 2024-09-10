@@ -65,7 +65,6 @@ public class Main {
                         }
                     }
 
-
                     System.out.println("Driveway Now - ");
                     driveway.forEach(System.out::println);
                     System.out.print("\n");
