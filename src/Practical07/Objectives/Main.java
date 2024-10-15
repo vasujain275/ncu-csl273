@@ -41,7 +41,7 @@ class NumberSquare implements Runnable {
                 int num = queue.take();
                 Thread.sleep(1000);
                 if (num%2 == 0){
-                    System.out.println("Squared (even): " + num);
+                    System.out.println("Squared (even): " + num*num);
                 } else {
                     System.out.println("Its Odd: " + num);
                 }

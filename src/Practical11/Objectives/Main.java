@@ -1,5 +1,6 @@
 package Practical11.Objectives;
 
+import java.util.Random;
 import java.util.Scanner;
 
 class BankAccount {
@@ -15,7 +16,7 @@ class BankAccount {
             try {
                 wait();
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
+                e.printStackTrace();
             }
         }
         balance += amount;
@@ -28,7 +29,7 @@ class BankAccount {
             try {
                 wait();
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
+                e.printStackTrace();
             }
         }
         balance -= amount;
@@ -39,6 +40,7 @@ class BankAccount {
 
 class Producer implements Runnable {
     private BankAccount account;
+    private Random random = new Random();
 
     public Producer(BankAccount account) {
         this.account = account;
@@ -47,12 +49,12 @@ class Producer implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 5; i++) {
-            int amount = (int) (Math.random() * 100) + 100;
+            int amount = random.nextInt(100) + 100;
             account.deposit(amount);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
+                e.printStackTrace();
             }
         }
     }
@@ -60,6 +62,7 @@ class Producer implements Runnable {
 
 class Consumer implements Runnable {
     private BankAccount account;
+    private Random random = new Random();
 
     public Consumer(BankAccount account) {
         this.account = account;
@@ -68,12 +71,12 @@ class Consumer implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 5; i++) {
-            int amount = (int) (Math.random() * 50) + 50;
+            int amount = random.nextInt(50) + 50;
             account.withdraw(amount);
             try {
                 Thread.sleep(1500);
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
+                e.printStackTrace();
             }
         }
     }
